@@ -6,7 +6,7 @@ target 'HotchSportsProto' do
   use_frameworks!
 
   # Pods for HotchSportsProto
-  pod 'RSSelectionMenu'
+  pod 'Dropper'
 
   target 'HotchSportsProtoTests' do
     inherit! :search_paths
