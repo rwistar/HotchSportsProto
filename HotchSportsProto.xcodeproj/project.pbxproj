@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		8F1A00F22177F17F00CB0706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A00F12177F17F00CB0706 /* AppDelegate.swift */; };
-		8F1A00F42177F17F00CB0706 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A00F32177F17F00CB0706 /* ViewController.swift */; };
+		8F1A00F42177F17F00CB0706 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A00F32177F17F00CB0706 /* TeamViewController.swift */; };
 		8F1A00F72177F17F00CB0706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1A00F52177F17F00CB0706 /* Main.storyboard */; };
 		8F1A00F92177F18000CB0706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F1A00F82177F18000CB0706 /* Assets.xcassets */; };
 		8F1A00FC2177F18000CB0706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1A00FA2177F18000CB0706 /* LaunchScreen.storyboard */; };
 		8F1A01072177F18000CB0706 /* HotchSportsProtoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01062177F18000CB0706 /* HotchSportsProtoTests.swift */; };
 		8F1A01122177F18000CB0706 /* HotchSportsProtoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01112177F18000CB0706 /* HotchSportsProtoUITests.swift */; };
+		8F1A01202177F48F00CB0706 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A011F2177F48F00CB0706 /* ScoreViewController.swift */; };
+		8F1A01222177F4BA00CB0706 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01212177F4BA00CB0706 /* NewsViewController.swift */; };
+		8F1A01242177F4C200CB0706 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01232177F4C200CB0706 /* VideoViewController.swift */; };
+		8F1A01262177F55100CB0706 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01252177F55100CB0706 /* Team.swift */; };
+		8F1A01282177F55F00CB0706 /* ScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01272177F55F00CB0706 /* ScoreItem.swift */; };
+		8F1A012A2177F56D00CB0706 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01292177F56D00CB0706 /* Opponent.swift */; };
+		8F1A012C2177FE7B00CB0706 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A012B2177FE7B00CB0706 /* ScoreTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,7 @@
 /* Begin PBXFileReference section */
 		8F1A00EE2177F17F00CB0706 /* HotchSportsProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotchSportsProto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1A00F12177F17F00CB0706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F1A00F32177F17F00CB0706 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F1A00F32177F17F00CB0706 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		8F1A00F62177F17F00CB0706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F1A00F82177F18000CB0706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F1A00FB2177F18000CB0706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +54,13 @@
 		8F1A010D2177F18000CB0706 /* HotchSportsProtoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotchSportsProtoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1A01112177F18000CB0706 /* HotchSportsProtoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotchSportsProtoUITests.swift; sourceTree = "<group>"; };
 		8F1A01132177F18000CB0706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F1A011F2177F48F00CB0706 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		8F1A01212177F4BA00CB0706 /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		8F1A01232177F4C200CB0706 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		8F1A01252177F55100CB0706 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		8F1A01272177F55F00CB0706 /* ScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreItem.swift; sourceTree = "<group>"; };
+		8F1A01292177F56D00CB0706 /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
+		8F1A012B2177FE7B00CB0706 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +112,15 @@
 			isa = PBXGroup;
 			children = (
 				8F1A00F12177F17F00CB0706 /* AppDelegate.swift */,
-				8F1A00F32177F17F00CB0706 /* ViewController.swift */,
+				8F1A00F32177F17F00CB0706 /* TeamViewController.swift */,
 				8F1A00F52177F17F00CB0706 /* Main.storyboard */,
+				8F1A012B2177FE7B00CB0706 /* ScoreTableViewController.swift */,
+				8F1A01252177F55100CB0706 /* Team.swift */,
+				8F1A01272177F55F00CB0706 /* ScoreItem.swift */,
+				8F1A01292177F56D00CB0706 /* Opponent.swift */,
+				8F1A01232177F4C200CB0706 /* VideoViewController.swift */,
+				8F1A01212177F4BA00CB0706 /* NewsViewController.swift */,
+				8F1A011F2177F48F00CB0706 /* ScoreViewController.swift */,
 				8F1A00F82177F18000CB0706 /* Assets.xcassets */,
 				8F1A00FA2177F18000CB0706 /* LaunchScreen.storyboard */,
 				8F1A00FD2177F18000CB0706 /* Info.plist */,
@@ -256,8 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F1A00F42177F17F00CB0706 /* ViewController.swift in Sources */,
+				8F1A01262177F55100CB0706 /* Team.swift in Sources */,
+				8F1A00F42177F17F00CB0706 /* TeamViewController.swift in Sources */,
 				8F1A00F22177F17F00CB0706 /* AppDelegate.swift in Sources */,
+				8F1A01202177F48F00CB0706 /* ScoreViewController.swift in Sources */,
+				8F1A012A2177F56D00CB0706 /* Opponent.swift in Sources */,
+				8F1A01282177F55F00CB0706 /* ScoreItem.swift in Sources */,
+				8F1A01242177F4C200CB0706 /* VideoViewController.swift in Sources */,
+				8F1A01222177F4BA00CB0706 /* NewsViewController.swift in Sources */,
+				8F1A012C2177FE7B00CB0706 /* ScoreTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

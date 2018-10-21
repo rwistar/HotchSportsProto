@@ -1,24 +1,220 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V7I-Jm-iKv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scores and Schedule-->
+        <scene sceneID="FJk-Ac-oVp">
+            <objects>
+                <viewController id="30r-Zm-xHo" customClass="ScoreViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3EU-I2-5ll">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZFH-zW-NdE">
+                                <rect key="frame" x="0.0" y="130" width="375" height="488"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="488" id="jKT-HF-tc9"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableItemScore" rowHeight="68" id="QOo-tn-sAS" customClass="ScoreTableViewCell" customModule="HotchSportsProto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QOo-tn-sAS" id="roY-dl-EbM">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U08-mO-O6z">
+                                                    <rect key="frame" x="15" y="11" width="253" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="253" id="vHL-ja-TDv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhr-ap-KHm">
+                                                    <rect key="frame" x="278" y="11" width="82" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="82" id="ZVF-sN-hVt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pv-pG-dHH">
+                                                    <rect key="frame" x="15" y="40" width="343" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="343" id="ezo-st-fgq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nhr-ap-KHm" firstAttribute="trailing" secondItem="roY-dl-EbM" secondAttribute="trailingMargin" id="D12-TD-aIo"/>
+                                                <constraint firstItem="U08-mO-O6z" firstAttribute="leading" secondItem="roY-dl-EbM" secondAttribute="leadingMargin" id="PBv-IG-bCX"/>
+                                                <constraint firstItem="5pv-pG-dHH" firstAttribute="top" secondItem="U08-mO-O6z" secondAttribute="bottom" constant="8" id="a7e-nZ-vXv"/>
+                                                <constraint firstItem="nhr-ap-KHm" firstAttribute="top" secondItem="roY-dl-EbM" secondAttribute="topMargin" id="lOt-lg-rgy"/>
+                                                <constraint firstItem="U08-mO-O6z" firstAttribute="top" secondItem="roY-dl-EbM" secondAttribute="topMargin" id="w5R-Ho-zWQ"/>
+                                                <constraint firstItem="5pv-pG-dHH" firstAttribute="leading" secondItem="roY-dl-EbM" secondAttribute="leadingMargin" id="zZR-7U-4tX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblScoreEvent" destination="U08-mO-O6z" id="2JE-38-bCx"/>
+                                            <outlet property="lblScoreOpp" destination="5pv-pG-dHH" id="kfU-79-9bY"/>
+                                            <outlet property="lblScoreValue" destination="nhr-ap-KHm" id="je2-Bw-gwN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZFH-zW-NdE" firstAttribute="trailing" secondItem="Fxr-w1-HAp" secondAttribute="trailing" id="4Ub-iI-frw"/>
+                            <constraint firstItem="ZFH-zW-NdE" firstAttribute="leading" secondItem="Fxr-w1-HAp" secondAttribute="leading" id="APF-sf-0g3"/>
+                            <constraint firstItem="ZFH-zW-NdE" firstAttribute="bottom" secondItem="Fxr-w1-HAp" secondAttribute="bottom" id="BBA-cR-dlA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fxr-w1-HAp"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Scores and Schedule" id="07d-i8-9Kg"/>
+                    <connections>
+                        <outlet property="tblScores" destination="ZFH-zW-NdE" id="2Mt-Zz-nqi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Vu-Ny-Wou" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1745" y="-590"/>
+        </scene>
+        <!--Team-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TeamViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3bx-NG-aWY">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Team Record" id="js8-UB-pNk"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80899695303234354" green="0.80899695303234354" blue="0.80899695303234354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Team" image="calendar" id="abp-7R-Xss"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="118.29085457271366"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="luk-Td-yJ0">
+            <objects>
+                <viewController id="HRH-ig-s05" customClass="NewsViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nmc-8T-rI6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJZ-rs-Jig">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Athletics News" id="Sss-OH-yas"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.81633653100000003" blue="0.75191271199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="gw9-W4-ZCa"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="News" image="news" id="Vek-J3-DMh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eVG-rz-jCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="811"/>
+        </scene>
+        <!--Video-->
+        <scene sceneID="Fel-FY-KaZ">
+            <objects>
+                <viewController id="1T3-2Z-gpi" customClass="VideoViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vHC-Uh-Aor">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbL-Cm-ts0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Athletics Videos" id="1M4-P3-Kes"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.79095659542512964" green="1" blue="0.96719506079047657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="uZt-mP-m3h"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video" image="Movie" id="8Xq-q6-4Yk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKQ-dv-9cW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="1509"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ow8-Xs-mXm">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="V7I-Jm-iKv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dSO-Sr-YUl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1jb-qC-QiO" kind="relationship" relationship="viewControllers" id="08F-ge-AX8"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="XJ4-b8-SLz"/>
+                        <segue destination="HRH-ig-s05" kind="relationship" relationship="viewControllers" id="iTu-QR-IaR"/>
+                        <segue destination="1T3-2Z-gpi" kind="relationship" relationship="viewControllers" id="TGd-e7-T4N"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEj-zg-IlG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="328"/>
+        </scene>
+        <!--Scores-->
+        <scene sceneID="HNE-rW-YM0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1jb-qC-QiO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scores" image="advertising" id="64n-Bk-H2D"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Vp-gt-TjZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="30r-Zm-xHo" kind="relationship" relationship="rootViewController" id="aB2-M6-ki4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQj-h0-hsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="-589"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Movie" width="30" height="30"/>
+        <image name="advertising" width="30" height="30"/>
+        <image name="calendar" width="30" height="30"/>
+        <image name="news" width="30" height="30"/>
+    </resources>
 </document>
