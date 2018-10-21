@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		069A4F48FAA115CCF4CC9B9A /* Pods_HotchSportsProtoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6434D785C906A722F0A0314 /* Pods_HotchSportsProtoTests.framework */; };
+		19E751D0CA7F536C2E2252EF /* Pods_HotchSportsProto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DECC6C1E850A2B209A76091 /* Pods_HotchSportsProto.framework */; };
 		8F1A00F22177F17F00CB0706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A00F12177F17F00CB0706 /* AppDelegate.swift */; };
 		8F1A00F42177F17F00CB0706 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A00F32177F17F00CB0706 /* TeamViewController.swift */; };
 		8F1A00F72177F17F00CB0706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F1A00F52177F17F00CB0706 /* Main.storyboard */; };
@@ -22,6 +24,7 @@
 		8F1A012A2177F56D00CB0706 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01292177F56D00CB0706 /* Opponent.swift */; };
 		8F1A012C2177FE7B00CB0706 /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A012B2177FE7B00CB0706 /* ScoreTableViewController.swift */; };
 		8FF59FBA217C15B8006DAFCF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FF59FB9217C15B8006DAFCF /* Podfile */; };
+		E6ADD539CE95EAB79005C9C5 /* Pods_HotchSportsProtoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50CACF2BA1C399AC809A317 /* Pods_HotchSportsProtoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BDCFE0DCFFA74A0AFE65253 /* Pods-HotchSportsProtoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotchSportsProtoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotchSportsProtoUITests/Pods-HotchSportsProtoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6E12E093D4749420E027F085 /* Pods-HotchSportsProto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotchSportsProto.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotchSportsProto/Pods-HotchSportsProto.release.xcconfig"; sourceTree = "<group>"; };
+		8DECC6C1E850A2B209A76091 /* Pods_HotchSportsProto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotchSportsProto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1A00EE2177F17F00CB0706 /* HotchSportsProto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotchSportsProto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1A00F12177F17F00CB0706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8F1A00F32177F17F00CB0706 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +69,12 @@
 		8F1A01292177F56D00CB0706 /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
 		8F1A012B2177FE7B00CB0706 /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		8FF59FB9217C15B8006DAFCF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		A50CACF2BA1C399AC809A317 /* Pods_HotchSportsProtoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotchSportsProtoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6434D785C906A722F0A0314 /* Pods_HotchSportsProtoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HotchSportsProtoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A81E37859D8E0126436A4FE5 /* Pods-HotchSportsProtoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotchSportsProtoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotchSportsProtoUITests/Pods-HotchSportsProtoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC6D8B71734ED631B15DD164 /* Pods-HotchSportsProtoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotchSportsProtoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotchSportsProtoTests/Pods-HotchSportsProtoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7252665DF8860B27B74FCF0 /* Pods-HotchSportsProto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotchSportsProto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HotchSportsProto/Pods-HotchSportsProto.debug.xcconfig"; sourceTree = "<group>"; };
+		F779D94AD373C9E0A130A421 /* Pods-HotchSportsProtoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HotchSportsProtoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HotchSportsProtoTests/Pods-HotchSportsProtoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19E751D0CA7F536C2E2252EF /* Pods_HotchSportsProto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				069A4F48FAA115CCF4CC9B9A /* Pods_HotchSportsProtoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6ADD539CE95EAB79005C9C5 /* Pods_HotchSportsProtoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +113,8 @@
 				8F1A01052177F18000CB0706 /* HotchSportsProtoTests */,
 				8F1A01102177F18000CB0706 /* HotchSportsProtoUITests */,
 				8F1A00EF2177F17F00CB0706 /* Products */,
+				944C5E1D70820186CB069C01 /* Pods */,
+				CEB4216F5D37E95C690CE7E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +166,29 @@
 			path = HotchSportsProtoUITests;
 			sourceTree = "<group>";
 		};
+		944C5E1D70820186CB069C01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B7252665DF8860B27B74FCF0 /* Pods-HotchSportsProto.debug.xcconfig */,
+				6E12E093D4749420E027F085 /* Pods-HotchSportsProto.release.xcconfig */,
+				AC6D8B71734ED631B15DD164 /* Pods-HotchSportsProtoTests.debug.xcconfig */,
+				F779D94AD373C9E0A130A421 /* Pods-HotchSportsProtoTests.release.xcconfig */,
+				A81E37859D8E0126436A4FE5 /* Pods-HotchSportsProtoUITests.debug.xcconfig */,
+				3BDCFE0DCFFA74A0AFE65253 /* Pods-HotchSportsProtoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEB4216F5D37E95C690CE7E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8DECC6C1E850A2B209A76091 /* Pods_HotchSportsProto.framework */,
+				A6434D785C906A722F0A0314 /* Pods_HotchSportsProtoTests.framework */,
+				A50CACF2BA1C399AC809A317 /* Pods_HotchSportsProtoUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,9 +196,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F1A01162177F18000CB0706 /* Build configuration list for PBXNativeTarget "HotchSportsProto" */;
 			buildPhases = (
+				6960405AB0DE88AF28C2024A /* [CP] Check Pods Manifest.lock */,
 				8F1A00EA2177F17F00CB0706 /* Sources */,
 				8F1A00EB2177F17F00CB0706 /* Frameworks */,
 				8F1A00EC2177F17F00CB0706 /* Resources */,
+				7840C40D598B6600A0529DEC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F1A01192177F18000CB0706 /* Build configuration list for PBXNativeTarget "HotchSportsProtoTests" */;
 			buildPhases = (
+				F0B0F16E85B42A3245D53883 /* [CP] Check Pods Manifest.lock */,
 				8F1A00FE2177F18000CB0706 /* Sources */,
 				8F1A00FF2177F18000CB0706 /* Frameworks */,
 				8F1A01002177F18000CB0706 /* Resources */,
@@ -191,6 +234,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F1A011C2177F18000CB0706 /* Build configuration list for PBXNativeTarget "HotchSportsProtoUITests" */;
 			buildPhases = (
+				8BE4D5DC2DDF961B4A883ECF /* [CP] Check Pods Manifest.lock */,
 				8F1A01092177F18000CB0706 /* Sources */,
 				8F1A010A2177F18000CB0706 /* Frameworks */,
 				8F1A010B2177F18000CB0706 /* Resources */,
@@ -275,6 +319,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6960405AB0DE88AF28C2024A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotchSportsProto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7840C40D598B6600A0529DEC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HotchSportsProto/Pods-HotchSportsProto-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RSSelectionMenu/RSSelectionMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RSSelectionMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HotchSportsProto/Pods-HotchSportsProto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BE4D5DC2DDF961B4A883ECF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotchSportsProtoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0B0F16E85B42A3245D53883 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HotchSportsProtoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8F1A00EA2177F17F00CB0706 /* Sources */ = {
@@ -460,14 +579,12 @@
 		};
 		8F1A01172177F18000CB0706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7252665DF8860B27B74FCF0 /* Pods-HotchSportsProto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HotchSportsProto/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rwistar.HotchSportsProto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -477,14 +594,12 @@
 		};
 		8F1A01182177F18000CB0706 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E12E093D4749420E027F085 /* Pods-HotchSportsProto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HotchSportsProto/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rwistar.HotchSportsProto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -494,16 +609,13 @@
 		};
 		8F1A011A2177F18000CB0706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC6D8B71734ED631B15DD164 /* Pods-HotchSportsProtoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HotchSportsProtoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rwistar.HotchSportsProtoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -514,16 +626,13 @@
 		};
 		8F1A011B2177F18000CB0706 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F779D94AD373C9E0A130A421 /* Pods-HotchSportsProtoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HotchSportsProtoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rwistar.HotchSportsProtoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -534,15 +643,12 @@
 		};
 		8F1A011D2177F18000CB0706 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A81E37859D8E0126436A4FE5 /* Pods-HotchSportsProtoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HotchSportsProtoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rwistar.HotchSportsProtoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -553,15 +659,12 @@
 		};
 		8F1A011E2177F18000CB0706 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BDCFE0DCFFA74A0AFE65253 /* Pods-HotchSportsProtoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = HotchSportsProtoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rwistar.HotchSportsProtoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
