@@ -167,9 +167,9 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Configure the cell...
         
         if indexPath.row % 2 == 0 {
-            cell.backgroundColor = UIColor(red: 225.0/255.0, green: 225.0/255.0, blue: 225.0/255.0, alpha: 1.0)
+            cell.backgroundColor = UIColor(red: 15/255, green: 43/255, blue: 91/255, alpha: 0.4)
         } else {
-            cell.backgroundColor = UIColor.blue
+            cell.backgroundColor = .white
         }
         
         let scoreItem = myScoreItems[indexPath.row]
