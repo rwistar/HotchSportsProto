@@ -45,6 +45,18 @@ class ScoreTableViewController: UITableViewController {
     
     var myScoreItems = [ScoreItem]()
     
+    var myScoreTeams: [String : Bool] = [
+        "Boys Cross Country": true,
+        "Girls Cross Country": true,
+        "Field Hockey": true,
+        "Mountain Biking": true,
+        "Football": true,
+        "Boys Soccer": true,
+        "Girls Soccer": true,
+        "Volleyball": true,
+        "Water Polo": true
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -231,14 +243,23 @@ class ScoreTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "segueScoreFilter" {
+            if let destination = segue.destination as? ScoreFilterTableViewController {
+                destination.teamFlags = myScoreTeams
+                
+                destination.tableView.reloadData()
+            }
+            
+        }
     }
-    */
+    
 
 }

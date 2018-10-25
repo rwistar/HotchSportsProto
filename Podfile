@@ -6,7 +6,6 @@ target 'HotchSportsProto' do
   use_frameworks!
 
   # Pods for HotchSportsProto
-  pod 'Dropper'
 
   target 'HotchSportsProtoTests' do
     inherit! :search_paths

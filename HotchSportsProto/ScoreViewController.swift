@@ -15,9 +15,7 @@ class ScoreTableViewCell: UITableViewCell {
     
 }
 
-class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    
+class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ScoreFilterDelegate {
     
     @IBOutlet weak var tblScores: UITableView!
     
@@ -48,6 +46,19 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         ]
     
     var myScoreItems = [ScoreItem]()
+    var filteredScores = [ScoreItem]()
+    
+    var myScoreTeams: [String : Bool] = [
+        "Boys Cross Country": true,
+        "Girls Cross Country": true,
+        "Field Hockey": true,
+        "Mountain Biking": true,
+        "Football": true,
+        "Boys Soccer": true,
+        "Girls Soccer": true,
+        "Volleyball": true,
+        "Water Polo": true
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,19 +70,11 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // Do any additional setup after loading the view.
         
-//        var dateComponents = DateComponents()
-//        dateComponents.year = 2018
-//        dateComponents.month = 10
-//        dateComponents.day = 17
-//
-//        let calendar = Calendar.current
-//        let date = calendar.date(from: dateComponents)
-//
-//        var testScore = ScoreItem(myScoreTeam: Team(myTeamName: "Varsity Field Hockey"), myScoreDate: date!, myScoreOpp: Opponent(myOppName: "Westminster"), myScoreResult: .win, myScoreText: "3-0")
-//
-//        print(testScore)
-        
         loadTestScores()
+        filterScores()
+        
+//        print(filteredScores)
+
     }
 
     func loadTestScores() {
@@ -138,7 +141,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
             myScoreItems.append(scoreItem)
         }
         
-        print(myScoreItems)
+        //print(myScoreItems)
     }
 
     override func didReceiveMemoryWarning() {
@@ -158,7 +161,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     */
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myScoreItems.count
+        return filteredScores.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -172,7 +175,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.backgroundColor = .white
         }
         
-        let scoreItem = myScoreItems[indexPath.row]
+        let scoreItem = filteredScores[indexPath.row]
         
         let date = scoreItem.shortDate
         
@@ -200,5 +203,74 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         return cell
     }
+    
+    /// update filteredScores to include only selected teams from myScoreTeams
+    func filterScores() {
+        filteredScores = [ScoreItem]()
+        
+        for scoreItem in myScoreItems {
+            for team in myScoreTeams.keys {
+//                print(teamWords)
+                if myScoreTeams[team] == true && scoreItemMatch(team: scoreItem.myScoreTeam.myTeamName, key: team) {
+//                    print("Found \(team) in \(scoreItem.myScoreTeam.myTeamName)")
+                    filteredScores.append(scoreItem)
+                }
+            }
+        }
+    }
+    
+    /// checks to see if a given team matches a generic program name (e.g., does "Boys JV Soccer" contain "Boys Soccer"? --> TRUE)
+    ///
+    /// - Parameters:
+    ///   - team: the team to check
+    ///   - key: the sport to search for
+    /// - Returns: true if team contains key, else false
+    func scoreItemMatch(team: String, key: String) -> Bool {
+        let teamWords = key.split(separator: " ")
+        var wordArray = [String]()
+        for word in teamWords {
+            wordArray.append(String(word))
+        }
 
+        for word in wordArray {
+            if !team.contains(word) {
+                return false
+            }
+        }
+        
+        return true
+    }
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "segueScoreFilter" {
+            if let destination = segue.destination as? ScoreFilterTableViewController {
+                destination.teamFlags = myScoreTeams
+                
+                destination.tableView.reloadData()
+                
+                destination.delegate = self
+            }
+            
+        }
+    }
+    
+    /// Delegate method to update myScoreTeams from filter page
+    ///
+    /// - Parameter teamFlags: new values for myScoreTeams
+    func updateScoreTable(teamFlags: [String : Bool]) {
+        print("\n\n\nUPDATE_SCORE_TABLE")
+        
+        myScoreTeams = teamFlags
+        
+//        print(myScoreTeams)
+        
+        filterScores()
+//        print(filteredScores)
+        
+        tblScores.reloadData()
+    }
 }

@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZFH-zW-NdE">
-                                <rect key="frame" x="0.0" y="130" width="375" height="488"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="488" id="jKT-HF-tc9"/>
+                                    <constraint firstAttribute="height" constant="554" id="jKT-HF-tc9"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableItemScore" rowHeight="68" id="QOo-tn-sAS" customClass="ScoreTableViewCell" customModule="HotchSportsProto" customModuleProvider="target">
@@ -86,14 +86,48 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fxr-w1-HAp"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Scores and Schedule" id="07d-i8-9Kg"/>
+                    <navigationItem key="navigationItem" title="Scores and Schedule" id="07d-i8-9Kg">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="pys-Te-3WF">
+                            <connections>
+                                <segue destination="YUo-eT-j0P" kind="show" identifier="segueScoreFilter" id="h9v-gO-eR1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tblScores" destination="ZFH-zW-NdE" id="2Mt-Zz-nqi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vu-Ny-Wou" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="-590"/>
+            <point key="canvasLocation" x="1744.8" y="-590.55472263868069"/>
+        </scene>
+        <!--Score Filter Table View Controller-->
+        <scene sceneID="uEJ-X5-eci">
+            <objects>
+                <tableViewController id="YUo-eT-j0P" customClass="ScoreFilterTableViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="x1Z-Jj-jIY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="tableItemScoreFilter" id="LM3-JQ-eML">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LM3-JQ-eML" id="fEn-Wi-NuF">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YUo-eT-j0P" id="MR7-oK-0NZ"/>
+                            <outlet property="delegate" destination="YUo-eT-j0P" id="ikk-mR-5lc"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0C-gd-IXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="-591"/>
         </scene>
         <!--Team-->
         <scene sceneID="tne-QT-ifu">
