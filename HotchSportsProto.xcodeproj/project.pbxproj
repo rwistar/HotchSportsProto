@@ -21,6 +21,8 @@
 		8F1A01262177F55100CB0706 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01252177F55100CB0706 /* Team.swift */; };
 		8F1A01282177F55F00CB0706 /* ScoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01272177F55F00CB0706 /* ScoreItem.swift */; };
 		8F1A012A2177F56D00CB0706 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01292177F56D00CB0706 /* Opponent.swift */; };
+		8F72962D21814B4E00E7A83A /* TeamRecordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72962C21814B4E00E7A83A /* TeamRecordItem.swift */; };
+		8F72962F21814D6300E7A83A /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72962E21814D6300E7A83A /* TeamTableViewController.swift */; };
 		8FF59FBA217C15B8006DAFCF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FF59FB9217C15B8006DAFCF /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,8 @@
 		8F1A01252177F55100CB0706 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		8F1A01272177F55F00CB0706 /* ScoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreItem.swift; sourceTree = "<group>"; };
 		8F1A01292177F56D00CB0706 /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
+		8F72962C21814B4E00E7A83A /* TeamRecordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRecordItem.swift; sourceTree = "<group>"; };
+		8F72962E21814D6300E7A83A /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		8FF59FB9217C15B8006DAFCF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -115,15 +119,17 @@
 			isa = PBXGroup;
 			children = (
 				8F1A00F12177F17F00CB0706 /* AppDelegate.swift */,
-				8F1A00F32177F17F00CB0706 /* TeamViewController.swift */,
 				8F1A00F52177F17F00CB0706 /* Main.storyboard */,
+				8F1A00F32177F17F00CB0706 /* TeamViewController.swift */,
 				8F1A01252177F55100CB0706 /* Team.swift */,
-				8F1A01272177F55F00CB0706 /* ScoreItem.swift */,
 				8F1A01292177F56D00CB0706 /* Opponent.swift */,
+				8F1A01272177F55F00CB0706 /* ScoreItem.swift */,
+				8F72962C21814B4E00E7A83A /* TeamRecordItem.swift */,
 				8F1A01232177F4C200CB0706 /* VideoViewController.swift */,
 				8F1A01212177F4BA00CB0706 /* NewsViewController.swift */,
 				8F1A011F2177F48F00CB0706 /* ScoreViewController.swift */,
 				8F0E82D22180C7BB0071976C /* ScoreFilterTableViewController.swift */,
+				8F72962E21814D6300E7A83A /* TeamTableViewController.swift */,
 				8F1A00F82177F18000CB0706 /* Assets.xcassets */,
 				8F1A00FA2177F18000CB0706 /* LaunchScreen.storyboard */,
 				8F1A00FD2177F18000CB0706 /* Info.plist */,
@@ -288,8 +294,10 @@
 				8F1A012A2177F56D00CB0706 /* Opponent.swift in Sources */,
 				8F1A01282177F55F00CB0706 /* ScoreItem.swift in Sources */,
 				8F1A01242177F4C200CB0706 /* VideoViewController.swift in Sources */,
+				8F72962D21814B4E00E7A83A /* TeamRecordItem.swift in Sources */,
 				8F1A01222177F4BA00CB0706 /* NewsViewController.swift in Sources */,
 				8F0E82D32180C7BB0071976C /* ScoreFilterTableViewController.swift in Sources */,
+				8F72962F21814D6300E7A83A /* TeamTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
