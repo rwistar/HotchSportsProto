@@ -129,7 +129,7 @@
             </objects>
             <point key="canvasLocation" x="2654" y="-591"/>
         </scene>
-        <!--Team Records-->
+        <!--Overall Records-->
         <scene sceneID="yGf-yb-ZcC">
             <objects>
                 <tableViewController id="UKL-AJ-Wiv" customClass="TeamTableViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
@@ -184,7 +184,10 @@
                             <outlet property="delegate" destination="UKL-AJ-Wiv" id="Y87-6J-pc0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Team Records" id="Veh-di-eEN"/>
+                    <navigationItem key="navigationItem" title="Overall Records" id="Veh-di-eEN"/>
+                    <connections>
+                        <segue destination="GX5-f8-adf" kind="show" identifier="segueTeamRecord" id="72b-Dg-zmK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l5v-GA-Urn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -317,6 +320,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmd-ZQ-mtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="810.94452773613204"/>
+        </scene>
+        <!--Team Record-->
+        <scene sceneID="3yk-ef-2vK">
+            <objects>
+                <viewController id="GX5-f8-adf" customClass="TeamScoreViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0xZ-31-9tJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sd0-zg-YcR">
+                                <rect key="frame" x="0.0" y="128" width="375" height="490"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="490" id="i0u-Ck-VdI"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableItemScore" rowHeight="68" id="YcS-Vs-WmY" customClass="ScoreTableViewCell" customModule="HotchSportsProto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="68"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YcS-Vs-WmY" id="oaI-Gb-hXj">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4e-L0-zQB">
+                                                    <rect key="frame" x="15" y="11" width="253" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="253" id="ggS-Yh-BVV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0A-dU-OiI">
+                                                    <rect key="frame" x="278" y="11" width="82" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="82" id="Lby-bQ-feB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opponent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uS4-KK-Fio">
+                                                    <rect key="frame" x="15" y="40" width="343" height="17"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="343" id="CB0-qN-hoa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="N4e-L0-zQB" firstAttribute="top" secondItem="oaI-Gb-hXj" secondAttribute="topMargin" id="0MQ-Tz-1iv"/>
+                                                <constraint firstItem="N4e-L0-zQB" firstAttribute="leading" secondItem="oaI-Gb-hXj" secondAttribute="leadingMargin" id="D3l-Cb-OBI"/>
+                                                <constraint firstItem="Q0A-dU-OiI" firstAttribute="trailing" secondItem="oaI-Gb-hXj" secondAttribute="trailingMargin" id="Izz-HY-rEB"/>
+                                                <constraint firstItem="Q0A-dU-OiI" firstAttribute="top" secondItem="oaI-Gb-hXj" secondAttribute="topMargin" id="TuF-77-Z5T"/>
+                                                <constraint firstItem="uS4-KK-Fio" firstAttribute="top" secondItem="N4e-L0-zQB" secondAttribute="bottom" constant="8" id="Z6A-DT-g1S"/>
+                                                <constraint firstItem="uS4-KK-Fio" firstAttribute="leading" secondItem="oaI-Gb-hXj" secondAttribute="leadingMargin" id="gWh-zh-K56"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblScoreEvent" destination="N4e-L0-zQB" id="Ql7-jL-BFf"/>
+                                            <outlet property="lblScoreOpp" destination="uS4-KK-Fio" id="tmO-Ax-CEB"/>
+                                            <outlet property="lblScoreValue" destination="Q0A-dU-OiI" id="TtJ-hp-f8E"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePp-hl-lBu">
+                                <rect key="frame" x="104" y="72" width="166" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Record Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jI3-HX-7l4">
+                                <rect key="frame" x="114" y="96" width="146.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sd0-zg-YcR" firstAttribute="bottom" secondItem="oPp-Sx-FBm" secondAttribute="bottom" id="8TN-Sc-vSK"/>
+                            <constraint firstItem="ePp-hl-lBu" firstAttribute="centerX" secondItem="0xZ-31-9tJ" secondAttribute="centerX" id="LrW-ng-NFr"/>
+                            <constraint firstItem="jI3-HX-7l4" firstAttribute="top" secondItem="ePp-hl-lBu" secondAttribute="bottom" id="QIA-IZ-ljc"/>
+                            <constraint firstItem="sd0-zg-YcR" firstAttribute="leading" secondItem="oPp-Sx-FBm" secondAttribute="leading" id="VIG-yZ-BvY"/>
+                            <constraint firstItem="ePp-hl-lBu" firstAttribute="top" secondItem="oPp-Sx-FBm" secondAttribute="top" constant="8" id="X2b-JP-def"/>
+                            <constraint firstItem="jI3-HX-7l4" firstAttribute="centerX" secondItem="0xZ-31-9tJ" secondAttribute="centerX" id="bsa-Ri-9n5"/>
+                            <constraint firstItem="sd0-zg-YcR" firstAttribute="trailing" secondItem="oPp-Sx-FBm" secondAttribute="trailing" id="hQ4-6O-3rj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oPp-Sx-FBm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Team Record" id="3cD-GD-Ve3">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="9Pn-8W-8cv"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="lblTeamName" destination="ePp-hl-lBu" id="6mx-uZ-qWG"/>
+                        <outlet property="lblTeamRecord" destination="jI3-HX-7l4" id="HGc-Nc-Vht"/>
+                        <outlet property="tblTeamScores" destination="sd0-zg-YcR" id="jZj-HI-fey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mfe-rx-ub1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2653.5999999999999" y="117.39130434782609"/>
         </scene>
     </scenes>
     <resources>

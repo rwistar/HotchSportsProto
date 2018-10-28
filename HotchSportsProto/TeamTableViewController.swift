@@ -124,5 +124,9 @@ class TeamTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "segueTeamRecord", sender: self)
+    }
 
 }

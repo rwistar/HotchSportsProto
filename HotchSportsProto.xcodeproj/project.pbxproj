@@ -23,6 +23,7 @@
 		8F1A012A2177F56D00CB0706 /* Opponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F1A01292177F56D00CB0706 /* Opponent.swift */; };
 		8F72962D21814B4E00E7A83A /* TeamRecordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72962C21814B4E00E7A83A /* TeamRecordItem.swift */; };
 		8F72962F21814D6300E7A83A /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72962E21814D6300E7A83A /* TeamTableViewController.swift */; };
+		8FB1F76C2183651100BC9E2B /* TeamScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */; };
 		8FF59FBA217C15B8006DAFCF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FF59FB9217C15B8006DAFCF /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		8F1A01292177F56D00CB0706 /* Opponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Opponent.swift; sourceTree = "<group>"; };
 		8F72962C21814B4E00E7A83A /* TeamRecordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRecordItem.swift; sourceTree = "<group>"; };
 		8F72962E21814D6300E7A83A /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
+		8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreViewController.swift; sourceTree = "<group>"; };
 		8FF59FB9217C15B8006DAFCF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			children = (
 				8F1A00F12177F17F00CB0706 /* AppDelegate.swift */,
 				8F1A00F52177F17F00CB0706 /* Main.storyboard */,
+				8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */,
 				8F1A00F32177F17F00CB0706 /* TeamViewController.swift */,
 				8F1A01252177F55100CB0706 /* Team.swift */,
 				8F1A01292177F56D00CB0706 /* Opponent.swift */,
@@ -297,6 +300,7 @@
 				8F72962D21814B4E00E7A83A /* TeamRecordItem.swift in Sources */,
 				8F1A01222177F4BA00CB0706 /* NewsViewController.swift in Sources */,
 				8F0E82D32180C7BB0071976C /* ScoreFilterTableViewController.swift in Sources */,
+				8FB1F76C2183651100BC9E2B /* TeamScoreViewController.swift in Sources */,
 				8F72962F21814D6300E7A83A /* TeamTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
