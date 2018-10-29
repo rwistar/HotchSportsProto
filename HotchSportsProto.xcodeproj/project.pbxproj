@@ -122,7 +122,6 @@
 			children = (
 				8F1A00F12177F17F00CB0706 /* AppDelegate.swift */,
 				8F1A00F52177F17F00CB0706 /* Main.storyboard */,
-				8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */,
 				8F1A00F32177F17F00CB0706 /* TeamViewController.swift */,
 				8F1A01252177F55100CB0706 /* Team.swift */,
 				8F1A01292177F56D00CB0706 /* Opponent.swift */,
@@ -133,6 +132,7 @@
 				8F1A011F2177F48F00CB0706 /* ScoreViewController.swift */,
 				8F0E82D22180C7BB0071976C /* ScoreFilterTableViewController.swift */,
 				8F72962E21814D6300E7A83A /* TeamTableViewController.swift */,
+				8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */,
 				8F1A00F82177F18000CB0706 /* Assets.xcassets */,
 				8F1A00FA2177F18000CB0706 /* LaunchScreen.storyboard */,
 				8F1A00FD2177F18000CB0706 /* Info.plist */,

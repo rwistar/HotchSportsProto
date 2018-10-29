@@ -8,6 +8,8 @@
 
 import Foundation
 
+var allTeams = [Team]()
+
 struct Team: CustomStringConvertible {
     var myTeamName: String
     

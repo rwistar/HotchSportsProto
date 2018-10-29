@@ -8,6 +8,8 @@
 
 import Foundation
 
+var myScoreItems = [ScoreItem]()
+
 struct ScoreItem {
     enum GameResult {
         case win, lose, tie, scrimmage, cancel, postpone, other, future

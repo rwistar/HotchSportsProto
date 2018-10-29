@@ -17,6 +17,8 @@ class TeamTableViewCell: UITableViewCell {
 class TeamTableViewController: UITableViewController {
     
     var myRecordItems = [TeamRecordItem]()
+    
+    var selectedTeam = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,18 +28,42 @@ class TeamTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        myRecordItems += [
-            TeamRecordItem(myRecordTeam: Team(myTeamName: "Varsity Field Hockey"), myRecordWins: 3, myRecordLosses: 1, myRecordTies: 0),
-            TeamRecordItem(myRecordTeam: Team(myTeamName: "JV Field Hockey"), myRecordWins: 2, myRecordLosses: 2, myRecordTies: 0),
-            TeamRecordItem(myRecordTeam: Team(myTeamName: "Thirds Field Hockey"), myRecordWins: 1, myRecordLosses: 2, myRecordTies: 2),
-            TeamRecordItem(myRecordTeam: Team(myTeamName: "Girls Varsity Soccer"), myRecordWins: 7, myRecordLosses: 1, myRecordTies: 3),
-            TeamRecordItem(myRecordTeam: Team(myTeamName: "Girls JV Soccer"), myRecordWins: 4, myRecordLosses: 4, myRecordTies: 0),
-            TeamRecordItem(myRecordTeam: Team(myTeamName: "Girls Thirds Soccer"), myRecordWins: 9, myRecordLosses: 0, myRecordTies: 2)
 
+        loadTeamRecords()
         
         
-        ]
+//        myRecordItems += [
+//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Varsity Field Hockey"), myRecordWins: 3, myRecordLosses: 1, myRecordTies: 0),
+//            TeamRecordItem(myRecordTeam: Team(myTeamName: "JV Field Hockey"), myRecordWins: 2, myRecordLosses: 2, myRecordTies: 0),
+//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Thirds Field Hockey"), myRecordWins: 1, myRecordLosses: 2, myRecordTies: 2),
+//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Girls Varsity Soccer"), myRecordWins: 7, myRecordLosses: 1, myRecordTies: 3),
+//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Girls JV Soccer"), myRecordWins: 4, myRecordLosses: 4, myRecordTies: 0),
+//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Girls Thirds Soccer"), myRecordWins: 9, myRecordLosses: 0, myRecordTies: 2)
+//
+//
+//
+//        ]
+    }
+    
+    func loadTeamRecords() {
+        for team in allTeams {
+            var wins = 0
+            var losses = 0
+            var ties = 0
+            
+            for score in myScoreItems {
+                if team.myTeamName == score.myScoreTeam.myTeamName {
+                    switch score.myScoreResult {
+                    case .win: wins += 1
+                    case .lose: losses += 1
+                    case .tie: ties += 1
+                    default: break
+                    }
+                }
+            }
+            
+            myRecordItems.append(TeamRecordItem(myRecordTeam: team, myRecordWins: wins, myRecordLosses: losses, myRecordTies: ties))
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -126,7 +152,17 @@ class TeamTableViewController: UITableViewController {
     */
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? TeamTableViewCell {
+            selectedTeam = cell.lblTeamName.text!
+        }
         performSegue(withIdentifier: "segueTeamRecord", sender: self)
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueTeamRecord" {
+            if let destination = segue.destination as? TeamScoreViewController {
+                destination.teamName = selectedTeam
+            }
+        }
+    }
 }

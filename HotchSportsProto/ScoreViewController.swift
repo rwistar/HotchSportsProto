@@ -31,7 +31,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         ["Boys Varsity Soccer", "10/13/2018", "3:30 PM", "away", "Deerfield", "loss", "0-4"],
         ["Boys Varsity Water Polo", "10/13/2018", "3:30 PM", "away", "Deerfield", "loss", "10-14"],
         ["Boys Thirds Soccer", "10/13/2018", "3:30 PM", "away", "Deerfield", "win", "1-0"],
-        ["Boys JV Soccer", "10/13/2018", "3:30 PM", "away", "Deerfield", "win", "3-1"],
+        ["Boys JV Soccer", "10/13/2018", "3:30 PM", "away", "Deerfield", "tie", "1-1"],
         ["Thirds Field Hockey", "10/13/2018", "3:30 PM", "away", "Westminster", "cancel", ""],
         ["Thirds Field Hockey", "10/19/2018", "3:00 PM", "home", "HVRHS", "future", ""],
         ["Thirds Volleyball", "10/19/2018", "4:15 PM", "home", "IMS", "future", ""],
@@ -45,7 +45,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         ]
     
-    var myScoreItems = [ScoreItem]()
+    //var myScoreItems = [ScoreItem]()
     var filteredScores = [ScoreItem]()
     
     var myScoreTeams: [String : Bool] = [
@@ -67,6 +67,25 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         tblScores.delegate = self
         
         tblScores.rowHeight = 60.0
+        
+        allTeams += [
+            Team(myTeamName: "Varsity Field Hockey"),
+            Team(myTeamName: "JV Field Hockey"),
+            Team(myTeamName: "Thirds Field Hockey"),
+            Team(myTeamName: "Girls Varsity Soccer"),
+            Team(myTeamName: "Girls JV Soccer"),
+            Team(myTeamName: "Girls Thirds Soccer"),
+            Team(myTeamName: "Boys Varsity Soccer"),
+            Team(myTeamName: "Boys JV Soccer"),
+            Team(myTeamName: "Boys Thirds Soccer"),
+            Team(myTeamName: "Boys Varsity Cross Country"),
+            Team(myTeamName: "Girls Varsity Cross Country"),
+            Team(myTeamName: "Varsity Mountain Biking"),
+            Team(myTeamName: "Varsity Volleyball"),
+            Team(myTeamName: "JV Volleyball"),
+            Team(myTeamName: "Thirds Volleyball"),
+            Team(myTeamName: "Boys Varsity Water Polo"),
+        ]
         
         // Do any additional setup after loading the view.
         
