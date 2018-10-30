@@ -193,31 +193,6 @@
             </objects>
             <point key="canvasLocation" x="1744.8" y="117.39130434782609"/>
         </scene>
-        <!--News View Controller-->
-        <scene sceneID="luk-Td-yJ0">
-            <objects>
-                <viewController id="HRH-ig-s05" customClass="NewsViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Nmc-8T-rI6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJZ-rs-Jig">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Athletics News" id="Sss-OH-yas"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="0.81633653100000003" blue="0.75191271199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="gw9-W4-ZCa"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="tiT-ye-CjW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eVG-rz-jCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1745" y="811"/>
-        </scene>
         <!--Video-->
         <scene sceneID="Fel-FY-KaZ">
             <objects>
@@ -314,7 +289,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="HRH-ig-s05" kind="relationship" relationship="rootViewController" id="kD1-VT-ffq"/>
+                        <segue destination="3rm-f7-xP0" kind="relationship" relationship="rootViewController" id="N1a-qp-kjy"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qmd-ZQ-mtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -412,9 +387,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oPp-Sx-FBm"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Team Record" id="3cD-GD-Ve3">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="9Pn-8W-8cv"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Team Record" id="3cD-GD-Ve3"/>
                     <connections>
                         <outlet property="lblTeamName" destination="ePp-hl-lBu" id="6mx-uZ-qWG"/>
                         <outlet property="lblTeamRecord" destination="jI3-HX-7l4" id="HGc-Nc-Vht"/>
@@ -424,6 +397,111 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mfe-rx-ub1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2653.5999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--Athletics News-->
+        <scene sceneID="RHr-jv-v2J">
+            <objects>
+                <viewController id="3rm-f7-xP0" customClass="NewsViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0QH-ul-8Oe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xyt-ar-5x4">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="554" id="Dzn-eG-ODu"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableItemNews" rowHeight="89" id="R37-I0-OaH" customClass="NewsTableViewCell" customModule="HotchSportsProto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R37-I0-OaH" id="HyP-Li-S7k">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Item Headline" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PZc-LD-5CV">
+                                                    <rect key="frame" x="15" y="11" width="345" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="9B1-0O-Gwq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0F-4Z-7bv">
+                                                    <rect key="frame" x="15" y="59" width="345" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PZc-LD-5CV" firstAttribute="top" secondItem="HyP-Li-S7k" secondAttribute="topMargin" id="0A2-4V-1cB"/>
+                                                <constraint firstItem="PZc-LD-5CV" firstAttribute="leading" secondItem="HyP-Li-S7k" secondAttribute="leadingMargin" id="Dv2-Tv-2hd"/>
+                                                <constraint firstItem="X0F-4Z-7bv" firstAttribute="leading" secondItem="HyP-Li-S7k" secondAttribute="leadingMargin" id="TUo-o1-OZc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="X0F-4Z-7bv" secondAttribute="trailing" id="Yv6-65-UrP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PZc-LD-5CV" secondAttribute="trailing" id="qdj-5i-bHr"/>
+                                                <constraint firstItem="X0F-4Z-7bv" firstAttribute="top" secondItem="PZc-LD-5CV" secondAttribute="bottom" constant="4" id="te8-GV-xIL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblNewsHead" destination="PZc-LD-5CV" id="KRj-TQ-12n"/>
+                                            <outlet property="lblNewsTeam" destination="X0F-4Z-7bv" id="Zgd-QH-tqh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xyt-ar-5x4" firstAttribute="bottom" secondItem="mYR-V2-R7q" secondAttribute="bottom" id="Qcg-BH-OIc"/>
+                            <constraint firstItem="xyt-ar-5x4" firstAttribute="trailing" secondItem="mYR-V2-R7q" secondAttribute="trailing" id="Wnq-td-rq4"/>
+                            <constraint firstItem="xyt-ar-5x4" firstAttribute="leading" secondItem="mYR-V2-R7q" secondAttribute="leading" id="wRa-H5-WIn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mYR-V2-R7q"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Athletics News" id="vJo-rn-d0x">
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="ZqI-xB-p98">
+                            <connections>
+                                <segue destination="2Vv-8d-0hb" kind="show" identifier="segueNewsFilter" id="ZSb-yx-KS8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tblNewsItems" destination="xyt-ar-5x4" id="rnd-tZ-bZe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJN-xe-uaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1744.8" y="810.94452773613204"/>
+        </scene>
+        <!--News Filter Table View Controller-->
+        <scene sceneID="DBw-Jt-nn7">
+            <objects>
+                <tableViewController id="2Vv-8d-0hb" customClass="NewsFilterTableViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5pZ-Md-Dm0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="tableItemScoreFilter" id="IWm-U1-I80">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IWm-U1-I80" id="7z2-h6-gs6">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2Vv-8d-0hb" id="gjO-nx-U7h"/>
+                            <outlet property="delegate" destination="2Vv-8d-0hb" id="XBb-7S-bsw"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAi-wm-NpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="811"/>
         </scene>
     </scenes>
     <resources>

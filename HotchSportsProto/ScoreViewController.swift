@@ -45,9 +45,6 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         ]
     
-    //var myScoreItems = [ScoreItem]()
-    var filteredScores = [ScoreItem]()
-    
     var myScoreTeams: [String : Bool] = [
         "Boys Cross Country": true,
         "Girls Cross Country": true,
@@ -59,6 +56,11 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         "Volleyball": true,
         "Water Polo": true
     ]
+    
+
+    
+    //var myScoreItems = [ScoreItem]()
+    var filteredScores = [ScoreItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,26 +69,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         tblScores.delegate = self
         
         tblScores.rowHeight = 60.0
-        
-        allTeams += [
-            Team(myTeamName: "Varsity Field Hockey"),
-            Team(myTeamName: "JV Field Hockey"),
-            Team(myTeamName: "Thirds Field Hockey"),
-            Team(myTeamName: "Girls Varsity Soccer"),
-            Team(myTeamName: "Girls JV Soccer"),
-            Team(myTeamName: "Girls Thirds Soccer"),
-            Team(myTeamName: "Boys Varsity Soccer"),
-            Team(myTeamName: "Boys JV Soccer"),
-            Team(myTeamName: "Boys Thirds Soccer"),
-            Team(myTeamName: "Boys Varsity Cross Country"),
-            Team(myTeamName: "Girls Varsity Cross Country"),
-            Team(myTeamName: "Varsity Mountain Biking"),
-            Team(myTeamName: "Varsity Volleyball"),
-            Team(myTeamName: "JV Volleyball"),
-            Team(myTeamName: "Thirds Volleyball"),
-            Team(myTeamName: "Boys Varsity Water Polo"),
-        ]
-        
+                
         // Do any additional setup after loading the view.
         
         loadTestScores()
