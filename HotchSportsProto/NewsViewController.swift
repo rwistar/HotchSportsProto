@@ -14,7 +14,7 @@ class NewsTableViewCell: UITableViewCell {
     
 }
 
-class NewsViewController: UIViewController , UITableViewDataSource, UITableViewDelegate, ScoreFilterDelegate {
+class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NewsFilterDelegate {
     
     @IBOutlet weak var tblNewsItems: UITableView!
     
@@ -37,6 +37,8 @@ class NewsViewController: UIViewController , UITableViewDataSource, UITableViewD
         "Volleyball": true,
         "Water Polo": true
     ]
+    
+    var selectedURL = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,19 +117,19 @@ class NewsViewController: UIViewController , UITableViewDataSource, UITableViewD
     
     /// update filteredScores to include only selected teams from myScoreTeams
     func filterNewsItems() {
-        filteredNews = myNewsItems
+        filteredNews = [NewsItem]()
         
 //        filteredScores = [ScoreItem]()
 //
-//        for scoreItem in myScoreItems {
-//            for team in myScoreTeams.keys {
-//                //                print(teamWords)
-//                if myScoreTeams[team] == true && scoreItemMatch(team: scoreItem.myScoreTeam.myTeamName, key: team) {
-//                    //                    print("Found \(team) in \(scoreItem.myScoreTeam.myTeamName)")
-//                    filteredScores.append(scoreItem)
-//                }
-//            }
-//        }
+        for newsItem in myNewsItems {
+            for team in myNewsTeams.keys {
+                //                print(teamWords)
+                if myNewsTeams[team] == true && newsItemMatch(team: newsItem.myNewsTeam.myTeamName, key: team) {
+                    //                    print("Found \(team) in \(scoreItem.myScoreTeam.myTeamName)")
+                    filteredNews.append(newsItem)
+                }
+            }
+        }
     }
     
     /// checks to see if a given team matches a generic program name (e.g., does "Boys JV Soccer" contain "Boys Soccer"? --> TRUE)
@@ -136,7 +138,7 @@ class NewsViewController: UIViewController , UITableViewDataSource, UITableViewD
     ///   - team: the team to check
     ///   - key: the sport to search for
     /// - Returns: true if team contains key, else false
-    func scoreItemMatch(team: String, key: String) -> Bool {
+    func newsItemMatch(team: String, key: String) -> Bool {
         let teamWords = key.split(separator: " ")
         var wordArray = [String]()
         for word in teamWords {
@@ -152,36 +154,54 @@ class NewsViewController: UIViewController , UITableViewDataSource, UITableViewD
         return true
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? NewsTableViewCell {
+            let head = cell.lblNewsHead.text!
+            
+            for newsItem in filteredNews {
+                if newsItem.myNewsHead == head {
+                    selectedURL = newsItem.myNewsURL
+                }
+            }
+        }
+        performSegue(withIdentifier: "segueNewsItem", sender: self)
+    }
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
-//        if segue.identifier == "segueNewsFilter" {
-//            if let destination = segue.destination as? ScoreFilterTableViewController {
-//                destination.teamFlags = myNewsTeams
-//
-//                destination.tableView.reloadData()
-//
-//                destination.delegate = self
-//            }
-//
-//        }
+        if segue.identifier == "segueNewsFilter" {
+            if let destination = segue.destination as? NewsFilterTableViewController {
+                destination.teamFlags = myNewsTeams
+
+                destination.tableView.reloadData()
+
+                destination.delegate = self
+            }
+
+        } else if segue.identifier == "segueNewsItem" {
+            if let destination = segue.destination as? NewsItemViewController {
+                destination.myURLString = selectedURL
+            }
+        }
+        
     }
     
     /// Delegate method to update myScoreTeams from filter page
     ///
     /// - Parameter teamFlags: new values for myScoreTeams
-    func updateScoreTable(teamFlags: [String : Bool]) {
+    func updateNewsTable(teamFlags: [String : Bool]) {
         print("\n\n\nUPDATE_SCORE_TABLE")
         
-//        myScoreTeams = teamFlags
+        myNewsTeams = teamFlags
 //
 //        //        print(myScoreTeams)
 //
-//        filterScores()
+        filterNewsItems()
 //        //        print(filteredScores)
 //
-//        tblScores.reloadData()
+        tblNewsItems.reloadData()
     }
 }

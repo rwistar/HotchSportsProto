@@ -101,7 +101,7 @@
             </objects>
             <point key="canvasLocation" x="1744.8" y="-590.55472263868069"/>
         </scene>
-        <!--Score Filter Table View Controller-->
+        <!--Title-->
         <scene sceneID="uEJ-X5-eci">
             <objects>
                 <tableViewController id="YUo-eT-j0P" customClass="ScoreFilterTableViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
@@ -124,6 +124,7 @@
                             <outlet property="delegate" destination="YUo-eT-j0P" id="ikk-mR-5lc"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="lFC-bs-Vqa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W0C-gd-IXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -447,6 +448,7 @@
                                         <connections>
                                             <outlet property="lblNewsHead" destination="PZc-LD-5CV" id="KRj-TQ-12n"/>
                                             <outlet property="lblNewsTeam" destination="X0F-4Z-7bv" id="Zgd-QH-tqh"/>
+                                            <segue destination="Gk7-Wq-Id6" kind="show" identifier="segueNewsItem" id="Z5h-ck-rf4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -475,7 +477,7 @@
             </objects>
             <point key="canvasLocation" x="1744.8" y="810.94452773613204"/>
         </scene>
-        <!--News Filter Table View Controller-->
+        <!--Title-->
         <scene sceneID="DBw-Jt-nn7">
             <objects>
                 <tableViewController id="2Vv-8d-0hb" customClass="NewsFilterTableViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
@@ -484,7 +486,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="tableItemScoreFilter" id="IWm-U1-I80">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="tableItemNewsFilter" id="IWm-U1-I80">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IWm-U1-I80" id="7z2-h6-gs6">
@@ -498,10 +500,43 @@
                             <outlet property="delegate" destination="2Vv-8d-0hb" id="XBb-7S-bsw"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="CgX-BR-qI7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAi-wm-NpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2654" y="811"/>
+        </scene>
+        <!--News Item-->
+        <scene sceneID="LM1-Ic-Adg">
+            <objects>
+                <viewController id="Gk7-Wq-Id6" customClass="NewsItemViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FHb-Z5-gO2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0A-CF-jL9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a0A-CF-jL9" firstAttribute="trailing" secondItem="UgW-oX-1YK" secondAttribute="trailing" id="5eR-0d-KXb"/>
+                            <constraint firstItem="a0A-CF-jL9" firstAttribute="leading" secondItem="UgW-oX-1YK" secondAttribute="leading" id="X7v-WT-IV4"/>
+                            <constraint firstItem="a0A-CF-jL9" firstAttribute="bottom" secondItem="UgW-oX-1YK" secondAttribute="bottom" id="bkw-cF-yQg"/>
+                            <constraint firstItem="a0A-CF-jL9" firstAttribute="top" secondItem="UgW-oX-1YK" secondAttribute="top" id="wmu-Ca-ZfS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UgW-oX-1YK"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="News Item" id="CVg-yT-0Cg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7yQ-zf-Dbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2653.5999999999999" y="1577.3613193403301"/>
         </scene>
     </scenes>
     <resources>
