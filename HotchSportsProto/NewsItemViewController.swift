@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class NewsItemViewController: UIViewController {
+class NewsItemViewController: UIViewController, WKNavigationDelegate {
     
     @IBOutlet weak var webNewsItem: WKWebView!
     
@@ -24,10 +24,11 @@ class NewsItemViewController: UIViewController {
             if let url = URL(string: urlString) {
                 let request = URLRequest(url: url)
                 webNewsItem.load(request)
+                
             }
         }
         
-
+        webNewsItem.navigationDelegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,4 +47,12 @@ class NewsItemViewController: UIViewController {
     }
     */
 
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+
+        if navigationAction.request.url?.absoluteString == myURLString {
+            decisionHandler(WKNavigationActionPolicy.allow)
+        } else {
+            decisionHandler(WKNavigationActionPolicy.cancel)
+        }
+    }
 }

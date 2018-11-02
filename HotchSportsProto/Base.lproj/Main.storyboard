@@ -448,7 +448,6 @@
                                         <connections>
                                             <outlet property="lblNewsHead" destination="PZc-LD-5CV" id="KRj-TQ-12n"/>
                                             <outlet property="lblNewsTeam" destination="X0F-4Z-7bv" id="Zgd-QH-tqh"/>
-                                            <segue destination="Gk7-Wq-Id6" kind="show" identifier="segueNewsItem" id="Z5h-ck-rf4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -471,6 +470,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tblNewsItems" destination="xyt-ar-5x4" id="rnd-tZ-bZe"/>
+                        <segue destination="Gk7-Wq-Id6" kind="show" identifier="segueNewsItem" id="vJy-wq-wT1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJN-xe-uaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -533,6 +533,9 @@
                         <viewLayoutGuide key="safeArea" id="UgW-oX-1YK"/>
                     </view>
                     <navigationItem key="navigationItem" title="News Item" id="CVg-yT-0Cg"/>
+                    <connections>
+                        <outlet property="webNewsItem" destination="a0A-CF-jL9" id="6pZ-An-DwI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yQ-zf-Dbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
