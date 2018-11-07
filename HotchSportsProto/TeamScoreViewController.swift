@@ -100,7 +100,7 @@ class TeamScoreViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tableItemScore", for: indexPath) as! ScoreTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tableItemScore", for: indexPath) as! TeamScoreTableViewCell
         
         // Configure the cell...
         

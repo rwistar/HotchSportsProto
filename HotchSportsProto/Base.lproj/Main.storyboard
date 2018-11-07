@@ -33,10 +33,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U08-mO-O6z">
-                                                    <rect key="frame" x="15" y="11" width="253" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U08-mO-O6z">
+                                                    <rect key="frame" x="15" y="11" width="70" height="21"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="253" id="vHL-ja-TDv"/>
+                                                        <constraint firstAttribute="width" constant="70" id="vHL-ja-TDv"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -59,20 +59,33 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbn-EX-LqH">
+                                                    <rect key="frame" x="93" y="11" width="196" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="196" id="Bin-GN-jcx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Hbn-EX-LqH" firstAttribute="top" secondItem="roY-dl-EbM" secondAttribute="topMargin" id="3fI-1o-4uj"/>
                                                 <constraint firstItem="nhr-ap-KHm" firstAttribute="trailing" secondItem="roY-dl-EbM" secondAttribute="trailingMargin" id="D12-TD-aIo"/>
                                                 <constraint firstItem="U08-mO-O6z" firstAttribute="leading" secondItem="roY-dl-EbM" secondAttribute="leadingMargin" id="PBv-IG-bCX"/>
                                                 <constraint firstItem="5pv-pG-dHH" firstAttribute="top" secondItem="U08-mO-O6z" secondAttribute="bottom" constant="8" id="a7e-nZ-vXv"/>
                                                 <constraint firstItem="nhr-ap-KHm" firstAttribute="top" secondItem="roY-dl-EbM" secondAttribute="topMargin" id="lOt-lg-rgy"/>
+                                                <constraint firstItem="Hbn-EX-LqH" firstAttribute="leading" secondItem="U08-mO-O6z" secondAttribute="trailing" constant="8" id="mDb-Qe-Qdh"/>
                                                 <constraint firstItem="U08-mO-O6z" firstAttribute="top" secondItem="roY-dl-EbM" secondAttribute="topMargin" id="w5R-Ho-zWQ"/>
                                                 <constraint firstItem="5pv-pG-dHH" firstAttribute="leading" secondItem="roY-dl-EbM" secondAttribute="leadingMargin" id="zZR-7U-4tX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="lblScoreEvent" destination="U08-mO-O6z" id="2JE-38-bCx"/>
+                                            <outlet property="lblScoreDate" destination="U08-mO-O6z" id="Mcc-EH-W8I"/>
                                             <outlet property="lblScoreOpp" destination="5pv-pG-dHH" id="kfU-79-9bY"/>
+                                            <outlet property="lblScoreTeam" destination="Hbn-EX-LqH" id="gzJ-XF-10y"/>
                                             <outlet property="lblScoreValue" destination="nhr-ap-KHm" id="je2-Bw-gwN"/>
+                                            <segue destination="GX5-f8-adf" kind="show" identifier="segueScoresToTeam" id="oJW-Cm-oVF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -209,15 +222,49 @@
                                     <navigationItem title="Athletics Videos" id="1M4-P3-Kes"/>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Ss-V6-KWy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableVideo" rowHeight="210" id="d7f-PD-rCg" customClass="VideoTableViewCell" customModule="HotchSportsProto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="210"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d7f-PD-rCg" id="Iuk-Hl-W1t">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGJ-DX-h3B">
+                                                    <rect key="frame" x="27" y="14" width="320" height="180"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="180" id="J8Q-hd-liZ"/>
+                                                        <constraint firstAttribute="width" constant="320" id="jYw-3i-fmf"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vGJ-DX-h3B" firstAttribute="centerX" secondItem="Iuk-Hl-W1t" secondAttribute="centerX" id="BWC-a4-dOM"/>
+                                                <constraint firstItem="vGJ-DX-h3B" firstAttribute="centerY" secondItem="Iuk-Hl-W1t" secondAttribute="centerY" id="ZMa-tV-UjN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="viewVideo" destination="vGJ-DX-h3B" id="btG-xu-527"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.79095659542512964" green="1" blue="0.96719506079047657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="uZt-mP-m3h"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Video" image="Movie" id="8Xq-q6-4Yk"/>
+                    <connections>
+                        <outlet property="tblVideos" destination="0Ss-V6-KWy" id="M0J-9Y-ivL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MKQ-dv-9cW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="1509"/>
+            <point key="canvasLocation" x="840.79999999999995" y="1508.9955022488757"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ow8-Xs-mXm">
@@ -312,7 +359,7 @@
                                     <constraint firstAttribute="height" constant="490" id="i0u-Ck-VdI"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableItemScore" rowHeight="68" id="YcS-Vs-WmY" customClass="ScoreTableViewCell" customModule="HotchSportsProto" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tableItemScore" rowHeight="68" id="YcS-Vs-WmY" customClass="TeamScoreTableViewCell" customModule="HotchSportsProto" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YcS-Vs-WmY" id="oaI-Gb-hXj">
@@ -548,4 +595,7 @@
         <image name="calendar" width="30" height="30"/>
         <image name="news" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oJW-Cm-oVF"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,7 +9,9 @@
 import UIKit
 
 class ScoreTableViewCell: UITableViewCell {
-    @IBOutlet weak var lblScoreEvent: UILabel!
+    @IBOutlet weak var lblScoreDate: UILabel!
+    @IBOutlet weak var lblScoreTeam: UILabel!
+//    @IBOutlet weak var lblScoreEvent: UILabel!
     @IBOutlet weak var lblScoreOpp: UILabel!
     @IBOutlet weak var lblScoreValue: UILabel!
     
@@ -199,7 +201,9 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
             result = scoreItem.shortResult
         }
         
-        cell.lblScoreEvent.text = "\(date) \(team)"
+        cell.lblScoreDate.text = date
+        cell.lblScoreTeam.text = team.description
+//        cell.lblScoreEvent.text = "\(date) \(team)"
         cell.lblScoreOpp.text = locText
         cell.lblScoreValue.text = result
         
@@ -257,6 +261,14 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
                 destination.delegate = self
             }
             
+        } else if segue.identifier == "segueScoresToTeam" {
+            if let destination = segue.destination as? TeamScoreViewController {
+                let cell = sender as! ScoreTableViewCell
+                
+                let team = cell.lblScoreTeam.text
+                
+                destination.teamName = team
+            }
         }
     }
     
