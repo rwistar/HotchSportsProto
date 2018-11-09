@@ -29,6 +29,9 @@
 		8FAB84A62188974E00D4368B /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAB84A52188974E00D4368B /* NewsItem.swift */; };
 		8FB1F76C2183651100BC9E2B /* TeamScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */; };
 		8FF59FBA217C15B8006DAFCF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 8FF59FB9217C15B8006DAFCF /* Podfile */; };
+		8FFDC4682195E02D007AE77F /* Andover.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8FFDC4672195DBA3007AE77F /* Andover.mp4 */; };
+		8FFDC4692195E02D007AE77F /* Hockey.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8FFDC4662195DBA3007AE77F /* Hockey.mp4 */; };
+		8FFDC46A2195E02D007AE77F /* Highlights.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 8FFDC4652195DBA3007AE77F /* Highlights.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		8FAB84A52188974E00D4368B /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreViewController.swift; sourceTree = "<group>"; };
 		8FF59FB9217C15B8006DAFCF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8FFDC4652195DBA3007AE77F /* Highlights.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Highlights.mp4; path = HotchSportsProto/Highlights.mp4; sourceTree = SOURCE_ROOT; };
+		8FFDC4662195DBA3007AE77F /* Hockey.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Hockey.mp4; path = HotchSportsProto/Hockey.mp4; sourceTree = SOURCE_ROOT; };
+		8FFDC4672195DBA3007AE77F /* Andover.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Andover.mp4; path = HotchSportsProto/Andover.mp4; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +134,7 @@
 		8F1A00F02177F17F00CB0706 /* HotchSportsProto */ = {
 			isa = PBXGroup;
 			children = (
+				8FFDC4642195DB83007AE77F /* Videos */,
 				8F1A00F12177F17F00CB0706 /* AppDelegate.swift */,
 				8F1A00F52177F17F00CB0706 /* Main.storyboard */,
 				8F1A00F32177F17F00CB0706 /* TeamViewController.swift */,
@@ -168,6 +175,16 @@
 				8F1A01132177F18000CB0706 /* Info.plist */,
 			);
 			path = HotchSportsProtoUITests;
+			sourceTree = "<group>";
+		};
+		8FFDC4642195DB83007AE77F /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				8FFDC4672195DBA3007AE77F /* Andover.mp4 */,
+				8FFDC4662195DBA3007AE77F /* Hockey.mp4 */,
+				8FFDC4652195DBA3007AE77F /* Highlights.mp4 */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +291,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFDC4682195E02D007AE77F /* Andover.mp4 in Resources */,
+				8FFDC4692195E02D007AE77F /* Hockey.mp4 in Resources */,
+				8FFDC46A2195E02D007AE77F /* Highlights.mp4 in Resources */,
 				8F1A00FC2177F18000CB0706 /* LaunchScreen.storyboard in Resources */,
 				8F1A00F92177F18000CB0706 /* Assets.xcassets in Resources */,
 				8FF59FBA217C15B8006DAFCF /* Podfile in Resources */,

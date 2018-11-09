@@ -19,7 +19,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     @IBOutlet weak var tblVideos: UITableView!
     
-    var myVideoURLS: [String] = ["https://vimeo.com/38195013"]
+    var myVideoNames: [String] = ["Andover", "Hockey", "Highlights"]
     
     var player: AVPlayer?
     
@@ -40,7 +40,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myVideoURLS.count
+        return myVideoNames.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -48,15 +48,25 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // Configure the cell...
         
-        let videoURL = URL(string: myVideoURLS[indexPath.row])
+//        let videoURL = URL(string: myVideoURLS[indexPath.row])
         
-        player = AVPlayer(url: videoURL!)
+        let name = myVideoNames[indexPath.row]
+        
+        let videoString : String? = Bundle.main.path(forResource: name, ofType: "mp4")
+        let unwrappedVideoString = videoString!
+        
+        let videoURL = URL(fileURLWithPath: unwrappedVideoString)
+        
+        
+        player = AVPlayer(url: videoURL)
         
         let layer = AVPlayerLayer(player: player)
         layer.frame = cell.viewVideo.bounds
         layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         
         cell.viewVideo.layer.addSublayer(layer)
+        
+        //player?.play()
         
         return cell
     }
