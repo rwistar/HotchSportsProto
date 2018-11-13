@@ -46,7 +46,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tblNewsItems.dataSource = self
         tblNewsItems.delegate = self
         
-        tblNewsItems.rowHeight = 90.0
+        tblNewsItems.rowHeight = 100.0
         
         
         // Do any additional setup after loading the view.
@@ -98,11 +98,11 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // Configure the cell...
         
-        if indexPath.row % 2 == 0 {
-            cell.backgroundColor = UIColor(red: 15/255, green: 43/255, blue: 91/255, alpha: 0.4)
-        } else {
-            cell.backgroundColor = .white
-        }
+//        if indexPath.row % 2 == 0 {
+//            cell.backgroundColor = UIColor(red: 15/255, green: 43/255, blue: 91/255, alpha: 0.4)
+//        } else {
+//            cell.backgroundColor = .white
+//        }
         
         let newsItem = filteredNews[indexPath.row]
         

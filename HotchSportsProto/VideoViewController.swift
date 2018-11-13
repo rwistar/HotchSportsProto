@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 
 class VideoTableViewCell: UITableViewCell {
+    @IBOutlet weak var lblVideoTitle: UILabel!
     @IBOutlet weak var webVideo: WKWebView!
     
 }
@@ -18,21 +19,25 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     @IBOutlet weak var tblVideos: UITableView!
     
-    var myVideoNames: [String] = ["https://www.youtube.com/embed/FZxMDvDMalM",
-        "https://www.youtube.com/embed/aentSZUmFrU",
-        "https://www.youtube.com/embed/TFLHlhoto6g"]
+    var myVideos = [VideoItem]()
     
 //    var player: AVPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myVideos += [
+            VideoItem(myVideoTitle: "2017 Team Highlights", myVideoURL: "https://www.youtube.com/embed/FZxMDvDMalM"),
+            VideoItem(myVideoTitle: "Varsity Football vs. Andover", myVideoURL: "https://www.youtube.com/embed/aentSZUmFrU"),
+            VideoItem(myVideoTitle: "Boys Varsity Lacrosse vs. Andover", myVideoURL: "https://www.youtube.com/embed/TFLHlhoto6g")
+        ]
 
         // Do any additional setup after loading the view.
         
         tblVideos.dataSource = self
         tblVideos.delegate = self
         
-        tblVideos.rowHeight = 200
+        tblVideos.rowHeight = 250
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +46,7 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myVideoNames.count
+        return myVideos.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -50,8 +55,11 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Configure the cell...
         
 //        let videoURL = URL(string: myVideoURLS[indexPath.row])
+
+        let video = myVideos[indexPath.row]
+        let title = video.myVideoTitle
+        let url = video.myVideoURL
         
-        let name = myVideoNames[indexPath.row]
         
 //        let videoString : String? = Bundle.main.path(forResource: name, ofType: "mp4")
 //        let unwrappedVideoString = videoString!
@@ -70,7 +78,9 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
 //        //player?.play()
 
         let view = cell.webVideo
-        view?.load(URLRequest(url: URL(string: name)!))
+        view?.load(URLRequest(url: URL(string: url)!))
+        
+        cell.lblVideoTitle.text = title
         
         return cell
     }
