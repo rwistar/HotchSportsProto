@@ -234,22 +234,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="209.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGJ-DX-h3B">
-                                                    <rect key="frame" x="27" y="14" width="320" height="180"/>
-                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="180" id="J8Q-hd-liZ"/>
-                                                        <constraint firstAttribute="width" constant="320" id="jYw-3i-fmf"/>
-                                                    </constraints>
-                                                </view>
+                                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Z-Yt-8vw">
+                                                    <rect key="frame" x="15" y="11" width="345" height="188"/>
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <wkWebViewConfiguration key="configuration">
+                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                        <wkPreferences key="preferences"/>
+                                                    </wkWebViewConfiguration>
+                                                </wkWebView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="vGJ-DX-h3B" firstAttribute="centerX" secondItem="Iuk-Hl-W1t" secondAttribute="centerX" id="BWC-a4-dOM"/>
-                                                <constraint firstItem="vGJ-DX-h3B" firstAttribute="centerY" secondItem="Iuk-Hl-W1t" secondAttribute="centerY" id="ZMa-tV-UjN"/>
+                                                <constraint firstItem="H9Z-Yt-8vw" firstAttribute="leading" secondItem="Iuk-Hl-W1t" secondAttribute="leadingMargin" id="4YI-Li-paa"/>
+                                                <constraint firstItem="H9Z-Yt-8vw" firstAttribute="trailing" secondItem="Iuk-Hl-W1t" secondAttribute="trailingMargin" id="6DQ-V1-exp"/>
+                                                <constraint firstItem="H9Z-Yt-8vw" firstAttribute="bottom" secondItem="Iuk-Hl-W1t" secondAttribute="bottomMargin" id="78U-UV-o85"/>
+                                                <constraint firstItem="H9Z-Yt-8vw" firstAttribute="top" secondItem="Iuk-Hl-W1t" secondAttribute="topMargin" id="bLC-Wk-jSk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="viewVideo" destination="vGJ-DX-h3B" id="btG-xu-527"/>
+                                            <outlet property="webVideo" destination="H9Z-Yt-8vw" id="V1r-u4-Tef"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

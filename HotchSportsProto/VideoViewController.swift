@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import AVKit
-import AVFoundation
+import WebKit
 
 class VideoTableViewCell: UITableViewCell {
-    @IBOutlet weak var viewVideo: UIView!
+    @IBOutlet weak var webVideo: WKWebView!
     
 }
 
@@ -19,9 +18,11 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     @IBOutlet weak var tblVideos: UITableView!
     
-    var myVideoNames: [String] = ["Andover", "Hockey", "Highlights"]
+    var myVideoNames: [String] = ["https://www.youtube.com/embed/FZxMDvDMalM",
+        "https://www.youtube.com/embed/aentSZUmFrU",
+        "https://www.youtube.com/embed/TFLHlhoto6g"]
     
-    var player: AVPlayer?
+//    var player: AVPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,21 +53,24 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         let name = myVideoNames[indexPath.row]
         
-        let videoString : String? = Bundle.main.path(forResource: name, ofType: "mp4")
-        let unwrappedVideoString = videoString!
-        
-        let videoURL = URL(fileURLWithPath: unwrappedVideoString)
-        
-        
-        player = AVPlayer(url: videoURL)
-        
-        let layer = AVPlayerLayer(player: player)
-        layer.frame = cell.viewVideo.bounds
-        layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        
-        cell.viewVideo.layer.addSublayer(layer)
-        
-        //player?.play()
+//        let videoString : String? = Bundle.main.path(forResource: name, ofType: "mp4")
+//        let unwrappedVideoString = videoString!
+//
+//        let videoURL = URL(fileURLWithPath: unwrappedVideoString)
+//
+//
+//        player = AVPlayer(url: videoURL)
+//
+//        let layer = AVPlayerLayer(player: player)
+//        layer.frame = cell.viewVideo.bounds
+//        layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+//
+//        cell.viewVideo.layer.addSublayer(layer)
+//
+//        //player?.play()
+
+        let view = cell.webVideo
+        view?.load(URLRequest(url: URL(string: name)!))
         
         return cell
     }
