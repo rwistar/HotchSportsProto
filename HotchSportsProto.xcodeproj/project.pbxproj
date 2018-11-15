@@ -25,7 +25,6 @@
 		8F72962D21814B4E00E7A83A /* TeamRecordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72962C21814B4E00E7A83A /* TeamRecordItem.swift */; };
 		8F72962F21814D6300E7A83A /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F72962E21814D6300E7A83A /* TeamTableViewController.swift */; };
 		8F9C6A80219DD5DA00010D4D /* NewsItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C6A7F219DD5DA00010D4D /* NewsItemViewController.swift */; };
-		8F9EF64A218A973200CB87A8 /* NewsItemViewControllerOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9EF649218A973200CB87A8 /* NewsItemViewControllerOLD.swift */; };
 		8FAB84A42188971700D4368B /* NewsFilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAB84A32188971700D4368B /* NewsFilterTableViewController.swift */; };
 		8FAB84A62188974E00D4368B /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAB84A52188974E00D4368B /* NewsItem.swift */; };
 		8FB1F76C2183651100BC9E2B /* TeamScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */; };
@@ -79,7 +78,6 @@
 		8F72962C21814B4E00E7A83A /* TeamRecordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRecordItem.swift; sourceTree = "<group>"; };
 		8F72962E21814D6300E7A83A /* TeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		8F9C6A7F219DD5DA00010D4D /* NewsItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemViewController.swift; sourceTree = "<group>"; };
-		8F9EF649218A973200CB87A8 /* NewsItemViewControllerOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItemViewControllerOLD.swift; sourceTree = "<group>"; };
 		8FAB84A32188971700D4368B /* NewsFilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFilterTableViewController.swift; sourceTree = "<group>"; };
 		8FAB84A52188974E00D4368B /* NewsItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsItem.swift; sourceTree = "<group>"; };
 		8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamScoreViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				8FB1F76B2183651100BC9E2B /* TeamScoreViewController.swift */,
 				8F1A01212177F4BA00CB0706 /* NewsViewController.swift */,
 				8FAB84A32188971700D4368B /* NewsFilterTableViewController.swift */,
-				8F9EF649218A973200CB87A8 /* NewsItemViewControllerOLD.swift */,
 				8F9C6A7F219DD5DA00010D4D /* NewsItemViewController.swift */,
 				8F1A01232177F4C200CB0706 /* VideoViewController.swift */,
 				8F2BFF54218FDE3A009437EA /* PlayerView.swift */,
@@ -347,7 +344,6 @@
 				8F72962D21814B4E00E7A83A /* TeamRecordItem.swift in Sources */,
 				8F1A01222177F4BA00CB0706 /* NewsViewController.swift in Sources */,
 				8F0E82D32180C7BB0071976C /* ScoreFilterTableViewController.swift in Sources */,
-				8F9EF64A218A973200CB87A8 /* NewsItemViewControllerOLD.swift in Sources */,
 				8FB1F76C2183651100BC9E2B /* TeamScoreViewController.swift in Sources */,
 				8F72962F21814D6300E7A83A /* TeamTableViewController.swift in Sources */,
 			);
