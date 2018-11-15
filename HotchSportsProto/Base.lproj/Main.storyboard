@@ -551,7 +551,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tblNewsItems" destination="xyt-ar-5x4" id="rnd-tZ-bZe"/>
-                        <segue destination="Gk7-Wq-Id6" kind="show" identifier="segueNewsItem" id="vJy-wq-wT1"/>
+                        <segue destination="uua-6U-Jwt" kind="show" identifier="segueNewsItem" id="cc1-lt-Uo2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJN-xe-uaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -590,13 +590,13 @@
         <!--News Item-->
         <scene sceneID="LM1-Ic-Adg">
             <objects>
-                <viewController id="Gk7-Wq-Id6" customClass="NewsItemViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gk7-Wq-Id6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FHb-Z5-gO2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a0A-CF-jL9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -620,7 +620,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7yQ-zf-Dbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2653.5999999999999" y="1577.3613193403301"/>
+            <point key="canvasLocation" x="1702" y="1657"/>
+        </scene>
+        <!--News Item-->
+        <scene sceneID="zeS-Vs-RdE">
+            <objects>
+                <viewController id="uua-6U-Jwt" customClass="NewsItemViewController" customModule="HotchSportsProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ruk-eH-sch">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV4-yq-Oid">
+                                <rect key="frame" x="16" y="86" width="343" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="36" id="WYG-sZ-j2b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AGaramondPro-Regular" family="Adobe Garamond Pro" pointSize="24"/>
+                                <color key="textColor" red="0.062745098040000002" green="0.15686274510000001" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="Cm6-sr-Dqe">
+                                <rect key="frame" x="16" y="130" width="343" height="488"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r6N-Zl-l4l" firstAttribute="trailing" secondItem="Cm6-sr-Dqe" secondAttribute="trailing" constant="16" id="AWt-iC-mnA"/>
+                            <constraint firstItem="r6N-Zl-l4l" firstAttribute="trailing" secondItem="sV4-yq-Oid" secondAttribute="trailing" constant="16" id="DdL-Bj-DDC"/>
+                            <constraint firstItem="Cm6-sr-Dqe" firstAttribute="bottom" secondItem="r6N-Zl-l4l" secondAttribute="bottom" id="FaK-Ui-N0B"/>
+                            <constraint firstItem="sV4-yq-Oid" firstAttribute="leading" secondItem="r6N-Zl-l4l" secondAttribute="leading" constant="16" id="Naj-4A-kc4"/>
+                            <constraint firstItem="Cm6-sr-Dqe" firstAttribute="leading" secondItem="r6N-Zl-l4l" secondAttribute="leading" constant="16" id="RUN-AC-LAB"/>
+                            <constraint firstItem="sV4-yq-Oid" firstAttribute="top" secondItem="r6N-Zl-l4l" secondAttribute="top" constant="22" id="fcs-Ft-FVr"/>
+                            <constraint firstItem="Cm6-sr-Dqe" firstAttribute="top" secondItem="sV4-yq-Oid" secondAttribute="bottom" constant="8" id="ivF-Az-FM1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r6N-Zl-l4l"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="News Item" id="bEr-rw-F4g"/>
+                    <connections>
+                        <outlet property="lblNewsHead" destination="sV4-yq-Oid" id="Via-eB-K9m"/>
+                        <outlet property="txtViewNewsText" destination="Cm6-sr-Dqe" id="fun-fe-Gvs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P17-Z6-aAA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2654" y="1554"/>
         </scene>
     </scenes>
     <resources>
