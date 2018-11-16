@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ScoreTableViewCell: UITableViewCell {
     @IBOutlet weak var lblScoreDate: UILabel!
@@ -20,6 +21,8 @@ class ScoreTableViewCell: UITableViewCell {
 class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ScoreFilterDelegate {
     
     @IBOutlet weak var tblScores: UITableView!
+    
+    private let refreshControl = UIRefreshControl()
     
     var testScoreTexts = [
         ["Varsity Volleyball", "10/17/2018", "4:00 PM", "home", "Deerfield", "loss", "0-3"],
@@ -79,6 +82,27 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
 //        print(filteredScores)
 
+        if #available(iOS 10.0, *) {
+            tblScores.refreshControl = refreshControl
+        } else {
+            tblScores.addSubview(refreshControl)
+        }
+
+        refreshControl.addTarget(self, action: #selector(refreshScores(_:)), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Scores")
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+            // Enable or disable features based on authorization.
+        }
+        
+
+    }
+    
+    @objc
+    private func refreshScores(_ sender: Any) {
+        print("refresh called")
+//        refreshControl.endRefreshing()
     }
 
     func loadTestScores() {
@@ -174,7 +198,7 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Configure the cell...
         
         if indexPath.row % 2 == 1 {
-            cell.backgroundColor = UIColor(red: 15/255, green: 43/255, blue: 91/255, alpha: 0.4)
+            cell.backgroundColor = UIColor(red: 15/255, green: 43/255, blue: 91/255, alpha: 0.2)
         } else {
             cell.backgroundColor = .white
         }
@@ -287,4 +311,17 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         tblScores.reloadData()
     }
+    
+    @IBAction func pressedNotify(_ sender: UIBarButtonItem) {
+        print("*** pressedNotify")
+        
+                let alert = UIAlertController(title: "Hey there!", message: "Did you finish reading this?", preferredStyle: .alert)
+        
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+
+        self.present(alert, animated: false)
+    }
+    
+    
 }

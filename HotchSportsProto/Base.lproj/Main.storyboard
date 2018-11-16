@@ -104,6 +104,11 @@
                         <viewLayoutGuide key="safeArea" id="Fxr-w1-HAp"/>
                     </view>
                     <navigationItem key="navigationItem" title="Scores and Schedule" id="07d-i8-9Kg">
+                        <barButtonItem key="leftBarButtonItem" title="Notify" id="1rP-4f-8l5">
+                            <connections>
+                                <action selector="pressedNotify:" destination="30r-Zm-xHo" id="Nae-xD-1AA"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="pys-Te-3WF">
                             <connections>
                                 <segue destination="YUo-eT-j0P" kind="show" identifier="segueScoreFilter" id="h9v-gO-eR1"/>

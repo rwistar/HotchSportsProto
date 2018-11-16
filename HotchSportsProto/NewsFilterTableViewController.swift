@@ -62,7 +62,8 @@ class NewsFilterTableViewController: UITableViewController {
             let team = teamNames[indexPath.row]
             
             cell.textLabel!.text = team
-            
+            cell.textLabel!.textColor = UIColor(red: 16/255, green: 40/255, blue: 91/255, alpha: 1.0)
+
             if team != "SHOW ALL TEAMS" && flags[team] == true {
                 cell.accessoryType = .checkmark
             } else {
