@@ -18,6 +18,10 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tblNewsItems: UITableView!
     
+    private let refreshControl = UIRefreshControl()
+    
+    var timer = Timer()
+    
     var testNewsTexts = [
         ["Varsity Sailing", "Petersen '22 Places Second at Singlehanded Nationals", "https://www.hotchkiss.org/athletics/news-post/~post/petersen-22-places-second-at-singlehanded-nationals-20181029"],
         ["Boys Varsity Cross Country", "Sidamon-Eristoff '19 Powers Boys Cross Country Past Choate", "https://www.hotchkiss.org/athletics/news-post/~post/sidamon-eristoff-19-powers-boys-cross-country-past-choate-20181022"],
@@ -54,6 +58,15 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         loadTestNewsItems()
         filterNewsItems()
         
+        if #available(iOS 10.0, *) {
+            tblNewsItems.refreshControl = refreshControl
+        } else {
+            tblNewsItems.addSubview(refreshControl)
+        }
+        
+        refreshControl.addTarget(self, action: #selector(refreshNewsItems(_:)), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Refreshing News Items")
+        
     }
     
     func loadTestNewsItems() {
@@ -71,7 +84,26 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 //        print(myNewsItems)
     }
+
+    @objc
+    private func refreshNewsItems(_ sender: Any) {
+        print("refresh called")
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.stopRefresh), userInfo: nil, repeats: false)
+    }
     
+    @objc
+    func stopRefresh() {
+    
+        if myNewsItems.count < 4 {
+            myNewsItems.append(NewsItem(myNewsTeam: Team(myTeamName: "Varsity Field Hockey"), myNewsHead: "Jennings '15 Named MOP, Middlebury Repeats", myNewsURL: "https://www.hotchkiss.org/athletics/news-post/~post/jennings-15-named-mop-middlebury-repeats-as-ncaa-champs-20181118"))
+            
+            filterNewsItems()
+            tblNewsItems.reloadData()
+        }
+    
+        refreshControl.endRefreshing()
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -24,6 +24,8 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     private let refreshControl = UIRefreshControl()
     
+    var timer = Timer()
+    
     var testScoreTexts = [
         ["Varsity Volleyball", "10/17/2018", "4:00 PM", "home", "Deerfield", "loss", "0-3"],
         ["JV Volleyball", "10/17/2018", "4:00 PM", "home", "Deerfield", "win", "3-1"],
@@ -102,7 +104,28 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     @objc
     private func refreshScores(_ sender: Any) {
         print("refresh called")
-//        refreshControl.endRefreshing()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.stopRefresh), userInfo: nil, repeats: false)
+    }
+    
+    @objc
+    func stopRefresh() {
+//        print(myScoreItems[13])
+//        print(myScoreItems[14])
+//        print(myScoreItems[15])
+        
+        myScoreItems[13].myScoreResult = .win
+        myScoreItems[13].myScoreText = "2-0"
+        
+        myScoreItems[14].myScoreResult = .lose
+        myScoreItems[14].myScoreText = "2-3"
+        
+        myScoreItems[15].myScoreResult = .tie
+        myScoreItems[15].myScoreText = "1-1"
+        
+        filterScores()
+        tblScores.reloadData()
+
+        refreshControl.endRefreshing()
     }
 
     func loadTestScores() {

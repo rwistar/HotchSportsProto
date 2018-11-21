@@ -105,7 +105,7 @@ class TeamScoreViewController: UIViewController, UITableViewDataSource, UITableV
         // Configure the cell...
         
         if indexPath.row % 2 == 1 {
-            cell.backgroundColor = UIColor(red: 15/255, green: 43/255, blue: 91/255, alpha: 0.4)
+            cell.backgroundColor = UIColor(red: 15/255, green: 43/255, blue: 91/255, alpha: 0.2)
         } else {
             cell.backgroundColor = .white
         }
