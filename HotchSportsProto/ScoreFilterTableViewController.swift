@@ -56,7 +56,7 @@ class ScoreFilterTableViewController: UITableViewController {
         // Configure the cell...
         
         if let flags = teamFlags {
-            var teamNames: [String] = ["SHOW ALL TEAMS"]
+            var teamNames: [String] = ["SELECT ALL TEAMS", "CLEAR ALL TEAMS"]
             teamNames += flags.keys.sorted()
             let team = teamNames[indexPath.row]
             
@@ -77,10 +77,16 @@ class ScoreFilterTableViewController: UITableViewController {
         let selectedCell = tableView.cellForRow(at: indexPath)
         
         if let teamName = selectedCell?.textLabel?.text {
-            if teamName == "SHOW ALL TEAMS" {
+            if teamName == "SELECT ALL TEAMS" {
                 if teamFlags != nil {
                     for team in teamFlags!.keys {
                         teamFlags![team] = true
+                    }
+                }
+            } else if teamName == "CLEAR ALL TEAMS" {
+                if teamFlags != nil {
+                    for team in teamFlags!.keys {
+                        teamFlags![team] = false
                     }
                 }
             } else {
