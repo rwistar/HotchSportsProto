@@ -93,12 +93,40 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         refreshControl.addTarget(self, action: #selector(refreshScores(_:)), for: .valueChanged)
         refreshControl.attributedTitle = NSAttributedString(string: "Refreshing Scores")
         
-        let center = UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
-            // Enable or disable features based on authorization.
-        }
+//        let center = UNUserNotificationCenter.current()
+//        center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+//            // Enable or disable features based on authorization.
+//        }
         
+        let content = UNMutableNotificationContent()
+        content.title = "Weekly Staff Meeting"
+        content.body = "Every Tuesday at 2pm"
+        
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
 
+        dateComponents.weekday = 3  // Tuesday
+        dateComponents.hour = 11    // 14:00 hours
+        dateComponents.minute = 53
+        
+        print(dateComponents)
+        
+        // Create the trigger as a repeating event.
+        let trigger = UNCalendarNotificationTrigger(
+            dateMatching: dateComponents, repeats: true)
+        
+        // Create the request
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                    content: content, trigger: trigger)
+
+        // Schedule the request with the system.
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.add(request) { (error) in
+           if error != nil {
+              // Handle any errors.
+           }
+        }
     }
     
     @objc
@@ -338,12 +366,14 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func pressedNotify(_ sender: UIBarButtonItem) {
         print("*** pressedNotify")
         
-                let alert = UIAlertController(title: "Hey there!", message: "Did you finish reading this?", preferredStyle: .alert)
-        
-        
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+//        let alert = UIAlertController(title: "Hey there!", message: "Did you finish reading this?", preferredStyle: .alert)
+//
+//
+//        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
+//
+//        self.present(alert, animated: false)
 
-        self.present(alert, animated: false)
+
     }
     
     
