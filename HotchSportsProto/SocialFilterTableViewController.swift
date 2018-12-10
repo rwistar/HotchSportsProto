@@ -8,6 +8,12 @@
 
 import UIKit
 
+var socialFeeds: [String : String] =
+    [
+    "Twitter": "https://twitter.com/hotchkisssports",
+    "Instagram": "https://www.instagram.com/hotchkiss.sports.highlights/"
+    ]
+
 class SocialFilterTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -29,23 +35,29 @@ class SocialFilterTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return socialFeeds.keys.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "socialFilterItem", for: indexPath)
 
         // Configure the cell...
+        
+        let keys = socialFeeds.keys.sorted()
+        
+        let key = keys[indexPath.row]
+        
+        cell.textLabel!.text = key
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -91,5 +103,13 @@ class SocialFilterTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath)!
+
+        whichFeed = selectedCell.textLabel!.text!
+        
+        self.navigationController?.popViewController(animated: true)
+    }
 
 }

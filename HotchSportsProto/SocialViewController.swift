@@ -9,6 +9,8 @@
 import UIKit
 import WebKit
 
+var whichFeed = "Twitter"
+
 class SocialViewController: UIViewController {
 
     @IBOutlet weak var wkSocialFeed: WKWebView!
@@ -17,13 +19,24 @@ class SocialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = URL(string: "https://twitter.com/hotchkisssports")!
-        wkSocialFeed.load(URLRequest(url: url))
+
+        
+        
+        
 
         // Do any additional setup after loading the view.
         
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if let urlString = socialFeeds[whichFeed] {
+            let url = URL(string: urlString)!
+            wkSocialFeed.load(URLRequest(url: url))
+        }
     }
 
     override func didReceiveMemoryWarning() {
