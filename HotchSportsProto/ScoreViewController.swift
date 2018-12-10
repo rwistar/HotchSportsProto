@@ -222,6 +222,12 @@ class ScoreViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         //print(myScoreItems)
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        tblScores.reloadData()
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
