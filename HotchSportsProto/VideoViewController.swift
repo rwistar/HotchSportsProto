@@ -21,8 +21,6 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var myVideos = [VideoItem]()
     
-//    var player: AVPlayer?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,29 +52,10 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         // Configure the cell...
         
-//        let videoURL = URL(string: myVideoURLS[indexPath.row])
-
         let video = myVideos[indexPath.row]
         let title = video.myVideoTitle
         let url = video.myVideoURL
         
-        
-//        let videoString : String? = Bundle.main.path(forResource: name, ofType: "mp4")
-//        let unwrappedVideoString = videoString!
-//
-//        let videoURL = URL(fileURLWithPath: unwrappedVideoString)
-//
-//
-//        player = AVPlayer(url: videoURL)
-//
-//        let layer = AVPlayerLayer(player: player)
-//        layer.frame = cell.viewVideo.bounds
-//        layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-//
-//        cell.viewVideo.layer.addSublayer(layer)
-//
-//        //player?.play()
-
         let view = cell.webVideo
         view?.load(URLRequest(url: URL(string: url)!))
         
@@ -85,10 +64,6 @@ class VideoViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
-
-
-    
-
     /*
     // MARK: - Navigation
 

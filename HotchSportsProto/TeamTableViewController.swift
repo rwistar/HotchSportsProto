@@ -31,21 +31,19 @@ class TeamTableViewController: UITableViewController {
 
         loadTeamRecords()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("***viewDidAppear")
         
-//        myRecordItems += [
-//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Varsity Field Hockey"), myRecordWins: 3, myRecordLosses: 1, myRecordTies: 0),
-//            TeamRecordItem(myRecordTeam: Team(myTeamName: "JV Field Hockey"), myRecordWins: 2, myRecordLosses: 2, myRecordTies: 0),
-//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Thirds Field Hockey"), myRecordWins: 1, myRecordLosses: 2, myRecordTies: 2),
-//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Girls Varsity Soccer"), myRecordWins: 7, myRecordLosses: 1, myRecordTies: 3),
-//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Girls JV Soccer"), myRecordWins: 4, myRecordLosses: 4, myRecordTies: 0),
-//            TeamRecordItem(myRecordTeam: Team(myTeamName: "Girls Thirds Soccer"), myRecordWins: 9, myRecordLosses: 0, myRecordTies: 2)
-//
-//
-//
-//        ]
+        loadTeamRecords()
+        tableView.reloadData()
     }
     
     func loadTeamRecords() {
+        myRecordItems = [TeamRecordItem]()
+    
         for team in allTeams {
             var wins = 0
             var losses = 0

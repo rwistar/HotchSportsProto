@@ -82,7 +82,6 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             myNewsItems.append(newsItem)
         }
 
-//        print(myNewsItems)
     }
 
     @objc
@@ -122,19 +121,12 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredNews.count
-//        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableItemNews", for: indexPath) as! NewsTableViewCell
         
         // Configure the cell...
-        
-//        if indexPath.row % 2 == 0 {
-//            cell.backgroundColor = UIColor(red: 15/255, green: 43/255, blue: 91/255, alpha: 0.4)
-//        } else {
-//            cell.backgroundColor = .white
-//        }
         
         let newsItem = filteredNews[indexPath.row]
         
@@ -151,13 +143,9 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func filterNewsItems() {
         filteredNews = [NewsItem]()
         
-//        filteredScores = [ScoreItem]()
-//
         for newsItem in myNewsItems {
             for team in myNewsTeams.keys {
-                //                print(teamWords)
                 if myNewsTeams[team] == true && newsItemMatch(team: newsItem.myNewsTeam.myTeamName, key: team) {
-                    //                    print("Found \(team) in \(scoreItem.myScoreTeam.myTeamName)")
                     filteredNews.append(newsItem)
                 }
             }
@@ -228,12 +216,9 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print("\n\n\nUPDATE_SCORE_TABLE")
         
         myNewsTeams = teamFlags
-//
-//        //        print(myScoreTeams)
-//
+
         filterNewsItems()
-//        //        print(filteredScores)
-//
+
         tblNewsItems.reloadData()
     }
 }
